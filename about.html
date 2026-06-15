@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <title>망원 클럽 룩북 — 정보 | RAW 스트리트 브루탈리즘</title>
+    <meta name="description" content="망원 클럽 룩북의 중심, RAW. 클럽 문화와 길거리 패션의 경계를 부수는 도발적인 정보. 위치, 연락처, 굳이 알려주지 않는 뒷이야기. 전화 010-6279-0862로 지금 합류하라.">
+    <meta name="keywords" content="망원 클럽, 망원 클럽 룩북, 망원 클럽 패션, 스트리트 브루탈리즘, 클럽 룩북, 망원 밤문화, RAW 클럽, 서울 클럽 룩북, 길거리 패션, 망원 정보">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b07-mw-club-look-1.vercel.app/info">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="망원 클럽 룩북 — 정보 | RAW 스트리트 브루탈리즘">
+    <meta property="og:description" content="망원 클럽 룩북의 중심, RAW. 클럽 문화와 길거리 패션의 경계를 부수는 도발적인 정보. 위치, 연락처, 굳이 알려주지 않는 뒷이야기.">
+    <meta property="og:url" content="https://t3b07-mw-club-look-1.vercel.app/info">
+    <meta property="og:image" content="https://t3b07-mw-club-look-1.vercel.app/assets/og-raw-info.jpg">
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #1a1a1a;
+            color: #e0dcd0;
+            font-family: 'Courier New', Courier, 'IBM Plex Mono', monospace;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+            position: relative;
+            min-height: 100vh;
+        }
+        /* BRUTALIST TEXTURE */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(60, 60, 60, 0.08) 0px, rgba(60, 60, 60, 0.08) 2px, transparent 2px, transparent 6px),
+                repeating-linear-gradient(-45deg, rgba(255, 200, 50, 0.02) 0px, rgba(255, 200, 50, 0.02) 1px, transparent 1px, transparent 8px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* TYPOGRAPHY - RAW SYSTEM MONO/IMPACT */
+        h1, h2, h3, h4, .heading-raw {
+            font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #f5f0e0;
+            line-height: 1.1;
+        }
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
+            border-left: 0.6rem solid #d4a373;
+            padding-left: 1rem;
+            word-break: break-word;
+        }
+        h2 {
+            font-size: 2.2rem;
+            margin: 2.5rem 0 1rem;
+            border-bottom: 0.2rem dashed #7f7b6e;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin: 1.2rem 0 0.6rem;
+        }
+        p, li, a, span, div {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 400;
+        }
+        a {
+            color: #d4a373;
+            text-decoration: underline wavy #6b5e4a 1px;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #f5cb8b;
+            text-decoration: underline wavy #d4a373 2px;
+        }
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        /* NAV — 고정 패턴 (nav-present, hamburger-menu) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 2px solid #3d3b36;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav-brand a {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: #f5f0e0;
+            letter-spacing: 0.2rem;
+            border: 0;
+        }
+        .nav-brand a:hover {
+            color: #d4a373;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+            color: #c4beb0;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+        }
+        .nav-links a:hover {
+            color: #f5f0e0;
+            border-bottom: 2px solid #d4a373;
+            text-decoration: none;
+        }
+        /* hamburger-menu (모바일) */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #e0dcd0;
+            border-radius: 0;
+            transition: 0.2s;
+        }
+        /* responsive-768 */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background: #232220;
+                padding: 1.5rem 1rem;
+                margin-top: 1rem;
+                border: 2px solid #4a4640;
+                gap: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .navbar {
+                align-items: flex-start;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
+        /* 카드/블록 — 브루탈리스트 박스 */
+        .info-block {
+            background: #242220;
+            border: 3px solid #3d3a33;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 6px 6px 0 #0f0e0c;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            color: #9c9182;
+            display: block;
+            border-left: 3px solid #6b5e4a;
+            padding-left: 0.6rem;
+            margin-bottom: 0.3rem;
+        }
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f5f0e0;
+            word-break: break-word;
+        }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #6b5e4a 0px, #6b5e4a 6px, transparent 6px, transparent 12px);
+            margin: 1.8rem 0;
+        }
+        .footer-note {
+            margin-top: 3rem;
+            padding: 1rem 0;
+            border-top: 2px solid #3d3a33;
+            font-size: 0.8rem;
+            color: #7f7b6e;
+            text-align: center;
+        }
+        .btn-raw {
+            display: inline-block;
+            background: #d4a373;
+            color: #1a1a1a;
+            font-weight: bold;
+            padding: 0.6rem 1.8rem;
+            border: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            transition: 0.2s;
+            box-shadow: 4px 4px 0 #0f0e0c;
+        }
+        .btn-raw:hover {
+            background: #f5cb8b;
+            color: #0f0e0c;
+            box-shadow: 6px 6px 0 #0f0e0c;
+            transform: translate(-2px, -2px);
+            text-decoration: none;
+        }
+        .phone-big {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f5cb8b;
+            letter-spacing: 0.3rem;
+        }
+        .location-marker {
+            background: #2d2a26;
+            padding: 0.8rem 1rem;
+            border-left: 8px solid #d4a373;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- nav-present + hamburger-menu 구조 -->
+        <nav class="navbar">
+            <div class="nav-brand"><a href="/">망원클럽룩북</a></div>
+            <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/">홈</a>
+                <a href="/info">정보</a>
+                <a href="/lookbook">룩북</a>
+                <a href="/raw">RAW</a>
+                <a href="/contact">합류</a>
+            </div>
+        </nav>
+
+        <!-- 페이지 고유 콘텐츠: 정보 + 지역 시그널 -->
+        <h1>정보｜망원 클럽 룩북</h1>
+        <p style="font-size:1.2rem; margin-bottom:2rem; border-left:4px solid #d4a373; padding-left:1rem;">
+            <strong>RAW 스트리트 브루탈리즘</strong> — 망원 클럽의 피와 살. 규격화된 정보는 없다. 
+            우리는 거리와 클럽의 경계를 짓밟는다. 아래는 니가 알 권리가 있는 것들.
+        </p>
+
+        <div class="info-block">
+            <span class="stat-label">📍 지역 / 베이스캠프</span>
+            <div class="location-marker">
+                <span class="stat-value">망원동, 서울</span><br>
+                <span style="color:#b0a89a;">클럽 RAW 본부 — 망원시장 골목 안, 콘크리트 계단 아래.</span>
+            </div>
+            <div class="divider"></div>
+            <span class="stat-label">📞 전화 (24/7 받는다)</span>
+            <div class="phone-big">010-6279-0862</div>
+            <div style="margin-top:0.5rem; color:#b0a89a;">“합류 전에 전화해. 무쓸모 인사는 걸러.”</div>
+        </div>
+
+        <!-- 2열 정보 그리드: 지역 시그널 강하게 -->
+        <div class="info-grid">
+            <div class="info-block" style="margin:0;">
+                <span class="stat-label">🚧 클럽 문화 vs 길거리</span>
+                <p style="margin-top:0.8rem; font-weight:bold;">“클럽은 콘크리트 위에서 태어났다.”</p>
+                <p>망원 클럽 룩북은 클럽 내부가 아니라 망원시장, 골목, 빈집, 지하 주차장에서 찍는다. 
+                브루탈리즘은 삶의 방식이다. 넥타이? 드레스 코드? 여긴 피와 땀과 흙먼지가 코드다.</p>
+                <div style="margin-top:1rem; background:#1f1d1a; padding:0.5rem 1rem;">
+                    <span style="color:#d4a373;">#스트리트_브루탈리즘 #망원_클럽_룩북</span>
+                </div>
+            </div>
+            <div class="info-block" style="margin:0;">
+                <span class="stat-label">⏳ 운영 시간 (룩북 촬영 & 미팅)</span>
+                <ul style="list-style:none; margin-top:0.8rem;">
+                    <li>• <strong>RAW 미팅</strong> — 매주 수/금/토 22:00~새벽</li>
+                    <li>• <strong>룩북 세션</strong> — 일요일 14:00~18:00 (망원역 3번 출구 집결)</li>
+                    <li>• <strong>클럽 나이트</strong> — 격주 토요일, 위치는 합류자에 한해 공개</li>
+                </ul>
+                <p style="margin-top:1rem; color:#c4beb0;">※ 정확한 시간은 전화 010-6279-0862로 확인. 늦으면 짐싸.</p>
+            </div>
+        </div>
+
+        <!-- 추가 정보: FAQ 스타일 (브루탈리스트) -->
+        <h2 style="margin-top:3rem;">🔻 굳이 묻는다면</h2>
+        <div class="info-block">
+            <h3 style="font-size:1.4rem; border-left:4px solid #d4a373; padding-left:0.8rem;">“망원 클럽 룩북은 왜 RAW인가?”</h3>
+            <p>가공되지 않은 콘크리트, 생짜 패션, 필터 없는 이미지. 망원 클럽의 진짜 얼굴은 
+            뻔한 클럽 사진이 아니라 길거리의 날것 그 자체다. 우리는 망원 클럽 룩북을 통해 
+            클럽 문화에 ‘스트리트 브루탈리즘’을 주입한다. 매끄러운 건 지루해. 거친 게 진짜다.</p>
+            <div class="divider" style="margin:1.5rem 0;"></div>
+            <h3 style="font-size:1.4rem; border-left:4px solid #d4a373; padding-left:0.8rem;">“어떻게 합류하나?”</h3>
+            <p>전화 010-6279-0862. 직접 목소리를 들려줘. “나는 망원 클럽 룩북에 어울리는 사람이다”라고 
+            증명해라. 스트리트 브루탈리즘을 입고, 클럽과 거리의 경계를 무시하는 사람. 
+            그게 너라면 와라.</p>
+            <a href="tel:01062790862" class="btn-raw" style="margin-top:1rem;">010-6279-0862 바로 연결</a>
+        </div>
+
+        <!-- 지역 시그널 강화 — 망원 클럽 룩북만의 아이덴티티 -->
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin:2.5rem 0;">
+            <div style="flex:1; min-width:200px; background:#1e1c1a; padding:1rem; border:2px solid #3d3a33;">
+                <span class="stat-label">📍 망원 클럽 룩북</span>
+                <div
+</body>
+</html>
